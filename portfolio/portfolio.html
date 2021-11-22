@@ -1,0 +1,215 @@
+[08.27, 9/11/2021] Abu Dzar Al Ghifari: <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 292px;
+  text-align: center;
+  background: url(https://ytimg.googleusercontent.com/vi/6M7h1YXrmH8/maxresdefault.jpg);
+  background-repeat: no-repeat;
+  padding-left: 0pc;
+
+}
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 1px;
+}
+  
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+ 
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+  /* pschpt2*/
+   .pschpt2 {
+       width: 21px;
+   }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>My Website</h1>
+  <p>A <b>responsive</b> website created by me.</p>
+</div>
+
+<div class="navbar">
+  <a href="#" class="active">Home</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="right">Link</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <div class="pschpt">
+        <img src="data:image/jpeg;base64,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">
+    </div>
+    <p><h3>what do you know from <label style="color: red;">psychopath..?</label></h3></p>
+    <h3>More Text</h3>
+    <p>isi daftar psychopath.</p>
+    <div class="fakeimg" style="height:60px;"> your name :.....? <br><br> date of birth :......?</div><br>
+    <div class="fakeimg" style="height:60px;"><br> work experiance...?</div><br>
+    <div class="fakeimg" style="height:60px;"><br>have a family.....?</div>
+  </div>
+  <div class="main">
+    <h2>WELCOME TO THE RISE OF A PSYCHOPATH</h2>
+    <h5>my psychopath, sel 9 11 2021</h5>
+    <div style="height: fit-content; display: inline-block;">
+        <img src="https://montasefilm.com/wp-content/uploads/2021/07/onadio-leonardo-ha-696x391.jpg" style="max-width: 100%; height: auto;">
+    </div>
+    <p><h2 style="color: red;">PSYCHOPATH SURVIVE</h2></p>
+    <p>Ini baru yang namanya thriller. Setelah membuang-buang waktu dan tenaga dengan I dan Will, akhirnya Anggy Umbara menunjukkan bagaimana thriller seharusnya melalui Survive: The Rise of Psychopath, film arahan ketiganya dari –yang katanya—trilogi thriller. Masih dengan naskah yang ditulis sendiri olehnya, film thriller psikologis ini juga diproduksi atas kerja sama antara PT Umbara Brothers Film dan KlikFilm Productions. Para pemerannya merupakan gabungan dari dua film sebelumnya, seperti Anggika Bolsterli, Amanda Rigby, Onadio Leonardo, dan Omar Daniel, serta tiga nama tambahan yakni Fatir Tan Malaka, Cindy Nirmala, dan T. Rifnu Wikana. Jadi, sejauh mana sisi thriller yang secara garis besar lebih baik ketimbang dua film sebelumnya dihadirkan oleh film ini?
+       <br><br>
+        Perkara kelainan psikologis yang tak semata soal autisme maupun keberadaan rumah sakit jiwa memperlihatkan sisi yang menarik melalui sosok Dani yang masih berusia anak-anak (Fatir Tan Malaka) dan ayahnya (T. Rifnu Wikana). Keduanya memegang prinsip dan idealisme tentang keadilan, serta mengaku berhak menghakimi siapapun yang bersalah di dunia tanpa memedulikan hak orang lain. <h5 style="color: green;"> korban mereka yang diketahui ialah Ibu Tiri Dani, Surti (Cindy Nirmala), serta Mila (Amanda Rigby) dan Vina (Anggika Bolsterli),</h5><label style="color: red;"> masing-masing istri dari dua sahabat Dani yang sudah dewasa, Sanjaya (Omar Daniel) dan Andra. Berbekal keyakinannya, Dani terus omong besar mengenai kebanggaannya jadi “martir” dunia, tetapi pada saat yang sama sangat kontradiktif dengan tindakannya sendiri, hingga terjebak oleh pandangannya terhadap salah seorang sanderanya..</label></p>
+    <br>
+    <h2>WELCOME TO PSYCHOPATH OR SOCIOPATH</h2>
+    <h5>my psychopath, Sel 9 11 2021</h5>
+    <div style="height: fit-content; display: inline-block;">
+        <img src="https://writerswrite.co.za/wp-content/uploads/2014/11/psychopath-or-sociopath.jpg" style="max-width: 100%; height: auto;">
+    </div>
+    <p>Some text..</p>
+    <p>Psychopaths use more past-tense verbs than other people. Most of us would say “I think this is a good idea” but a psychopath is most likely to say, “I thought that was a good idea.” According to research by Jefferey Hancock, the lead researcher and associate professor in communications at Cornell University, this is an indicator of psychological detachment.
+
+        Their language lacks an emotional dimension
+        <br><br>
+       <h5 style="color: palevioletred;">When speaking, psychopaths will not get their emotions involved. They lack empathy, so they have a shallow emotional experience. They can say emotional things back to people, but their facial expressions don’t match their words. Their feelings are learned behavior. “In lay terms, psychopaths seem to have little or no ‘conscience,’” say researchers in a study published in the journal Legal and Criminological Psychology.
+        
+        They are overly charming
+        
+        Psychopaths will talk more emotional words in an attempt to gain attention and admiration. They are really good at saying the right thing at the right time to play with people’s emotions and get what they want. Using the right words may lead people to give them money, voting them into office, or hurting them. Because of their interpersonal prowess, they give goof first impressions and can function successfully in society.
+        
+        Slow and quiet</h5>
+        <br><br>
+        Psychopaths always want control, even in their conversations. They will make sudden shifts in the subject of conversation when they don’t feel in control. They also speak in a controlled manner, slowly and quietly. Researchers suspect they craft this calm demeanor intentionally because it helps gain control. Their tone remains neutral and unemotional.
+        
+        Talk about life in terms of cause and effect
+        <br><br>
+        Psychopaths talk about their behavior in terms of cause and effect. Rather than show remorse, a psychopath is likely to justify their actions. According to research done by Hancock, using computer programs to analyze what murders said, they found that those with psychopathic scores showed a lack of emotion, spoke in terms of cause and effect when describing their crimes..</p>
+  </div>
+ 
+</div>
+
+<div class="pa1">
+  <h2>Footer</h2>
+  <div style="height: fit-content; display: inline-block;">
+    <img src="https://4.bp.blogspot.com/-ALv5aIP-s4Y/WQxl9FC8iKI/AAAAAAAAABg/MrcQZOX1WrIuigKt3A2pFp3xxOIhYebiACLcB/s1600/Ilustrasi%25252BPsikopat%25252B2-picsay.jpg" style="max-width: 100%; height: auto;">
+</div>
+<p><h2>EKSTRA KULIKULER PSYCHOPATH</h2></p>
+<P>1 Melempar pisou</P>
+<p>2 Belajar Menembak</p>
+<p>3 belajar menculik</p>
+<p>4 cara membunuh</p>
+<p>5 cara memegang pisau</p>
+<p>6 cara membunuh atanpa menyentuh</p>
+<p>7 target umur 12-25thn</p>
+  <div class="pscpt2">
+    <img src="https://i.ytimg.com/vi/hTJkZFDcbQY/maxresdefault.jpg" style="max-width: 40%; height: auto;"> 
+</div>  
+
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>my portfolio</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+      <div class="offcanvas-header">
+          <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body px-0">
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+              <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                      <i class="fs-5 bi-house"></i><span class="ms-1 d-none d-sm-inline">Home</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
+                      <i class="fs-5 bi-speedometer2"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+              </li>
+              <li>
+                  <a href="#" class="nav-link text-truncate">
+                      <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Orders</span></a>
+              </li>
+              <li class="dropdown">
+                  <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fs-5 bi-bootstrap"></i><span class="ms-1 d-none d-sm-inline">Bootstrap</span>
+                  </a>
+                  <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                      <li><a class="dropdown-item" href="#">New project...</a></li>
+                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li>
+                          <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#" class="nav-link text-truncate">
+                      <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
+              </li>
+              <li>
+                  <a href="#" class="nav-link text-truncate">
+                      <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+              </li>
+
+          </ul>
+      </div>
+  </div>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col min-vh-100 py-3">
+              <!-- toggler -->
+              <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+                  <i class="bi bi-arrow-right-square-fill fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+             </button>
+            
+          </div>
+      </div>
+  </div>
+   
+    <!--navbar-->
+    <nav class="navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-loggle="
+          collapse"data-target="sbs-example-navbar-collapse-1" aria-expanded="false
+          ">
+          <span class="sr-only">toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          </button>
+
+          <div>
+          </div>  
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <button class="openbtn " onclick="openNav()">☰</button> 
+            <div id="mysidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+              <li><a href="">Dzar</a></li>
+              <li><a href="#game">game</a></li>
+              <li><a href="#biodata">biodata</a></li>
+              <li><a href="#hobby">hooby</a></li>
+
+           </div>
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+    <div id="main"></div>
+    
+    
+    <script>
+    function openNav() {
+      document.getElementById("mysidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mysidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+    
+
+    <!--akhir navbar-->
+     
+    <!--jumbotron-->
+    <div class="jumbotron text-center"> 
+      <div style="margin-top: 40px;">
+        <div class="ratio ratio-1x1">
+          </div>
+        <img src="aku.punya.jpg" class="img-circle" width="200px" height="200px">
+        <h1>*Abu Dzar Al Ghifari*</h1>
+        <p>"Pencari Kebenaran, Menghilangkan Kebodohan"</p>
+      </div>
+    </div>
+    <!--akhir jumbotron-->
+
+    <!--about-->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center">My Game</h2>
+                    <div style="background-color: black;height: 5px; margin-bottom: 50px; margin-left: auto; margin-right: auto; display: block;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--akhir about-->
+
+    <!--portfolio-->
+    <section class="portfolio" id="portfolio">
+      <div id="game" class="row" style="padding: 30px;">
+        <div class="col-md-3 thumbnail" style="padding: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+              <img src="https://thumbs.gfycat.com/BrokenNegativeDouglasfirbarkbeetle-size_restricted.gif" atl>
+              
+              <p style="overflow-wrap: break-word;"><h4>MOBILE LEGEND BANGBANG</h4></p>
+              <p style="overflow-wrap: break-word;">mobile legend bambang salah satu game yang membuat candu kita para player-player, ketika menang
+               kita akan penasaran dan ingin memainkannya lagi, dan ketika kalah kita akan mencobanya kembali unatuk meraih kemenanga dan mengembalikan
+               <br><br>bintang yg turun, game tersebut mengasikkan banget dan anda harus mencoba memainkannya jika anda minat, jika tidak anda tidakakan merasakan
+               keniknyatnya di dalam game tersebut. Nah sebagian skin ini sudah bisa dibeli di shop, tapi untuk mendapatkan yang paling langka tentu tidak mudah.
+               Player harus menyiapkan banyak caram mulai dari gacha terbatas dan event terbatas.</p>
+           
+          </div>
+          <div class="col-md-3 thumbnail"style="padding: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">     
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKiEVJIW7O7DImDUqRU3yI-kPmjooZMPszhA&usqp=CAU" alt="">
+            
+            <p style="overflow-wrap: break-word;"><h4>BUS SIMULATOR INDONESIA</h4></p>
+            <p style="overflow-wrap: break-word;">JAKARTA, KOMPAS.com – Bus merupakan kendaraan yang bisa memuat banyak orang. Oleh karena itu, klub sepak bola sering menggunakannya sebagai kendaraan ketika bertanding,<br><br> baik di kandang maupun tandang ke luar kota. Di luar negeri, beberapa klub sepak bola menggunakan bus sejak lama. Bahkan busnya didesain sedemikian rupa agar memberikan ciri khas dari klub sepak bola tersebut. Saat ini di Indonesia pun sudah mulai banyak klub sepak bola yang menggunakan bus untuk alat transportasi para pemainnya.
+               Berikut ini Kompas.com kumpulkan beberapa klub sepak bola yang memakai bus,terutama buatan karoseri Adiputro.
+              Artikel ini telah tayang di Kompas. dengan judul "Deretan Bus Klub Sepak Bola Buatan Adiputro di Indonesia", Klik untuk baca: 
+              </p>
+        </div>
+        <div class="col-md-3 thumbnail"style="padding: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeoH2qrbi9QkhtCxtcLYJQRzoigLHiZqL9A&usqp=CAU" alt="">
+         
+          <p style="overflow-wrap: break-word;"><h4>REAL DRUM</h4></p>
+          <P style="overflow-wrap: break-word;">Bagi kamu yang senang bermain musik terutama drum, Real Drum merupakan aplikasi yang wajib kamu miliki di gadget kamu. Aplikasi ini akan memberikan kamu sebuah pengalaman baru dalam bermain drum. Bentuknya yang tersusun rapi seperti drum sungguhan membuat kita bisa memainkannya seperti kita bermain drum di studio.<br><br> Tidak hanya itu kamu bisa menyesuaikannya dengan jari kamu jika kamu merasa kesulitan memainkannya dengan standar drum sungguhan.
+            Real Drum bahkan bisa menghasilkan suara yang sangat jernih dan mendekati sempurna. Untuk bass drum, kamu bisa memilih single atau double pedal.</P>
+        </div>
+        <div class="col-md-3 thumbnail" style="padding: 10px; box-shadow: 0 4px 8px 0 rgba(43, 26, 26, 0.2);">
+            <img src="https://thumbs.gfycat.com/BetterCreativeIberianchiffchaff-size_restricted.gif" alt="">
+       
+          <p style="overflow-wrap: break-word;"></p><h4>PLAYERUNKNOWN'S BATTLEGROUNDS</h4></p>
+          <p  style="overflow-wrap: break-word;">INDOSPORT.COM - Game eSports paling populer, Player Unknown’s Battle Grounds (PUBG) telah menyelamatkan nyawa ribuan orang di desa Venkatapuram, India, dari kebocoran gas mematikan dari pabrik LG Polymers.
+
+            Kejadian kebocoran bahan kimia dari pabrik LG Polymers di India tersebut terjadi belum lama ini. Meskipun ada informasi peringatan yang terpasang di sekitaran pabrik, kemungkinan tidak bisa menyelamatkan ribuan nyawa di desa tersebut.
+            
+            Baca selengkapnya: https://www.indosport.com/esports/20200604/pubg-selamatkan-nyawa-ribuan-orang-di-india-dari-kebocoran-gas</p>
+        </div>
+      </div>
+    </section>
+    <!--akhir portfolio-->
+
+    <!--contact-->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center"></div>
+        </div>
+    </section>
+    <!--akhir contact-->
+
+    <div id="biodata" class="jumbotron">
+      <div class="row">
+        <h2 class="text-center">My biodata</h2>
+          <div style="background-color: black; height: 5px; width: 50%; margin-bottom: 50px; margin-right: auto; margin-left: auto;"></div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <ul>
+            <li><h4>Nama : Abu Dzar Al Ghifari.</h4></li>
+            <li><h4>TTL : 31 Desember 2002, Rumah Sakit.</h4></li>
+            <li>ALAMAT :<a href="https://www.google.com/maps/place/Jl.+Cijingga+I,+Serang,+Cikarang+Sel.,+Bekasi,+Jawa+Barat+17530/@-6.3555906,107.1213322,17z/data=!4m13!1m7!3m6!1s0x2e699a15e3c00941:0xe825819de29a54b5!2sJl.+Cijingga+I,+Serang,+Cikarang+Sel.,+Bekasi,+Jawa+Barat+17530!3b1!8m2!3d-6.3551953!4d107.1239668!3m4!1s0x2e699a15e3c00941:0xe825819de29a54b5!8m2!3d-6.3551953!4d107.1239668"> cikarang selatan jl,hj aleh cijingga.</a></li>
+            <li><h4>Cita-cita : Bahagiain Ortu, Pengusaha Sukses, Mati Syahid, Menghilangkan Kebodohan Umat.</h4></li>
+            <li><h4>Hobby : Main Bola, Renang, ngegame, Turing, Naik Gunung.</h4></li>
+            <li><h4>Mafor : Nasi Goreng, Nasi Putih, Rendang, Mie Ayam, Bakso Podomoro, Illa Kayu wa Batu.</h4></li>
+            <li><h4>Mifor : Jus Alpukat, Air Putih, Susu, Kopi, Apa Aja Yang Penting Halal.</h4></li>
+            <li><h4>Status : Jofis.</h4></li>
+            <li><h4>Kesan : Ketika Bermain Sama Temen Kemudian Di Hukum Bareng, melanggar bareng.</h4></li>
+            <li><h4>Pesan : Janganlah Kamu Merasa Sedih, Sesungguhnya Allah Bersama Kiata.</h4></li>
+      
+          </ul>
+
+          <!--
+
+ <form>
+                <div class="form-grooup">
+                    <label for="nama">*Nama*</label>
+                  </div>
+                  <div class="form-grooup">
+                    <label for="TTL">*TTL*</label>
+                </div>
+                <div class="form-grooup">
+                    <label for="ALAMAT">*ALAMAT*</label>
+                </div>
+                <div class="form-grooup">
+                  <label for="hobby">*Your hobby*</label>
+              </div>
+              <div class="form-grooup">
+                <label for="Cita-cita">*Cita-cita*</label>
+            </div>
+            <div class="form-grooup">
+              <label for="mafor">*Mafor*</label>
+          </div>
+          <div class="form-grooup">
+            <label for="mifor">*Mifor*</label>
+        </div>
+        <div class="form-grooup">
+          <label for="mafor">*Mafor*</label>
+      </div>
+          <div class="form-grooup">
+            <label for="pesan">*Pesan & Kesan*</label>
+          </div>
+          <br>
+            <button type="submit" class="btn-primary"> Lebih Detail Biodata</button>
+
+            </form>
+        </div>
+    </div>
+  </div>
+    </div>
+          -->
+
+          <br><br>
+          <section class="hobby" id="hobby">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="text-center">Hobby</h2>
+                        <div style="background-color: black;height: 5px; margin-bottom: 5px; margin-left: 300px; margin-right: 300px;"></div>
+                    </div>
+                </div>
+                <br><br>
+
+
+          <section class="portfolio" id="portfolio">
+            <div id="game" class="row" style="margin-right: -290PX; margin-left: -96px; ">
+                <div class="col-md-3 thumbnail padding-right: -524px; margin-left: -402px;" style="padding: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+                    <a href="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThMUK0hl-UlfqGiciDcSySDsXU8o_v1fqXYQ&usqp=CAU" atl>
+                    </a>
+                    <p style="overflow-wrap: break-word;"><h4>BERENANG</h4></p>
+                    <p style="overflow-wrap: break-word;">Renang merupakan salah satu olahraga yang menyenangkan dan mengasyikkan. Ada banyak gaya yang bisa kamu pelajari, mulai dari renang gaya bebas, gaya katak, gaya punggung, dan berbagai gaya lainnya.
+                      Kalau kamu suka olahraga, coba sesekali berenang untuk selingan rutinitas berolahragamu. Berenang bisa menjadi hobi yang sangat baik dan menyehatkan untuk badan kita. Bahkan, ada yang mengatakan kalau kamu berenang, tingi badan dapat bertambah lho.</p>
+                 
+                </div>
+                <div class="col-md-3 thumbnail"style="padding: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+                  <a href="">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMoz1CC4xI5OSvhxYXSwVkB25Qvff30yHiw&usqp=CAU" alt="">
+                  </a>
+                  <p style="overflow-wrap: break-word;"><h4>SUNNAH ROSUL MEMANAH</h4></p>
+                  <p style="overflow-wrap: break-word;">Yonif 3 Marinir mengikuti lomba Pasmar 2 Archery Competition dalam rangka memperingati HUT ke-75 Korps Marinir di Lapangan Kesatrian Marinir Moekijat Mako Pasmar 2 Gedangan, Sidoarjo, Jawa Timur, Selasa (10/11/2020).
+                    Kegiatan yang diikuti seluruh Satlak di jajaran Pasmar 2 tersebut bertujuan untuk mencari bibit baru atlet dalam cabang olahraga panahan. Adapun kategori yang dilombakan diantaranya Kategori Pamen, Keluarga, Memanah Reaksi Putra atau Putri dan Memanah Prestasi Putra atau Putri. 
+                    </p>
+              </div>
+              <div class="col-md-3 thumbnail"style="padding: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+                  <a href="">
+                  <img src="https://cdns.klimg.com/merdeka.com/i/w/news/2020/10/13/1230743/540x270/6-tujuan-permainan-sepak-bola-bisa-tingkatkan-kecerdasan-otak.jpg" alt="">
+                </a>
+                <p style="overflow-wrap: break-word;"><h4>SEPAK BOLA</h4></p>
+                <P style="overflow-wrap: break-word;">Merdeka.com - Sepak bola merupakan salah satu jenis olahraga yang paling populer di dunia. Banyaknya penggemar cabang olahraga ini, menjadikan setiap ada pertandingan sepak bola selalu berhasil menguasai siaran televisi. Bahkan, hampir semua stadion selalu dipenuhi pecinta sepak bola ketika sedang berlangsung sebuah pertandingan..</P>
+              </div>
+              <div class="col-md-3 thumbnail" style="padding: 10px; box-shadow: 0 4px 8px 0 rgba(43, 26, 26, 0.2);">
+                  <a href="">
+                  <img src="https://awsimages.detik.net.id/community/media/visual/2019/01/08/bd4b34d5-f984-4c72-bfbb-bf4ed9cd05e8_169.jpeg?w=780&q=90" alt="">
+                </a>
+                <p style="overflow-wrap: break-word;"></p><h4>NDAKI/NAIK GUNUNG</h4></p>
+                <p  style="overflow-wrap: break-word;">Jakarta - Aktivitas mendaki gunung masih menjadi kegiatan wisata favorit di masa kini. Namun, masih ada yang sengaja tak membawa peralatan wajib mendakinya.
+                  Peralatan mendaki ini amatlah penting ketika kita sudah melangkah ke hutan atau menginjak alam liar. Hidup kita bergantung pada apapun yang kita bawa.
+                  
+                  Penyakit ketinggian utama yang sering diidap pendaki adalah hipotermia. Maka dari itu fisik, mental dan peralatan haruslah dipersiapkan dengan matang.
+                  
+                  
+                  
+                  Baca artikel detikTravel, "Catat! Ini Daftar Peralatan Wajib untuk Mendaki Gunung" selengkapnya https://travel.detik.com/travel-news/d-5112159/catat-ini-daftar-peralatan-wajib-untuk-mendaki-gunung.
+                  
+                  Download Apps Detikcom Sekarang https://apps.detik.com/detik/</p>
+              </div>
+            </div>
+          </section>
+
+    
+              
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <script src="js/portfplioo.js"></script>
+  </body>
+</html>

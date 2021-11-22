@@ -1,0 +1,114 @@
+.s1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+}
+body {
+  background-color: white;
+  background-image: url(https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/45ab29df.png);
+  background-size: 700px;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.sign {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 158px;
+  margin-left: auto;
+}
+.pa1 {
+  background-color: white;
+  width: 300px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 9px;
+}
+.pa2 {
+  width: -5px;
+  margin-right: -243px;
+  color: green;
+  margin-block: -4px;
+ 
+}
+.pa3 {
+  margin-right: -178px;
+  color: green;
+}
+.pa4 {
+  background-color: #c8d6e5;
+  border-radius: 12px;
+  padding: 1px;
+}
+.pa6 {
+  text-align: center;
+  color: green;
+  margin-left: 0px;
+}
+
+.masuk {
+  margin-left: -221px;
+  padding-top: 9px;
+  margin-bottom: -36px;
+}
+.nomor {
+  padding-right: 182px;
+}
+.contoh {
+  padding-right: 170px;
+  margin-top: -14px;
+}
+.up {
+  padding-right: 122px;
+  padding-left: 1px;
+  height: 25px;
+  border-radius: 5px;
+  padding-top: 1px;
+}
+.ga1 {
+  padding-right: 282px;
+  padding-left: auto;
+  padding-top: 1px;
+}
+.ga2 {
+  padding-right: 81px;
+}
+.logo-goodle {
+  width: 27px;
+  height: 33px;
+  float: left;
+  padding-left: 92px; 
+}
+.scan {
+  width: 27px;
+  height: 33px;
+  float: left;
+  padding-left: 89px;
+}
+.search {
+  justify-content: left;
+  padding-right: 155px;
+}
+.garis {
+  display: flex;
+  align-items: center;
+}
+.garis1 {
+  border: 0.5px;
+  width: 25%;
+  border: 0.5px   solid rgba(0, 0, 0, 0.12);
+  width: 50%;
+}
+.garis2 {
+  font-size: 0.857143rem;
+  color: gray(0, 0, 0, 0.33);
+  white-space: nowrap;
+}
+.google {
+  margin-top: 6px;
+  margin-bottom: -71px;
+  font-size: 15px;
+}
+
